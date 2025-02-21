@@ -1,0 +1,9 @@
+.headerlist {
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.headerlist li{
+    display: inline;
+}
