@@ -2,6 +2,23 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 
+const stores = [
+  {
+    storeName: "Tech Hub",
+    storeDescription: "Best gadgets in town",
+    storeType: "Electronics",
+  },
+  {
+    storeName: "Book Haven",
+    storeDescription: "A paradise for book lovers",
+    storeType: "Books",
+  },
+  {
+    storeName: "Fashion Forward",
+    storeDescription: "Trendy clothes for everyone",
+    storeType: "Clothing",
+  },
+];
 // const db = require("./db");
 
 //--- Middleware ----------------------------------------------------
@@ -9,21 +26,8 @@ app.use(express.json());
 app.use("/", express.static("public"));
 
 //--- Routes --------------------------------------------------------
-app.get("/", (req, res) => {
+app.get("/stores", (req, res) => {
   res.json(stores);
-  const container = document.getElementById("store-container");
-  container.innerHTML = "";
-
-  stores.forEach((store) => {
-    const card = document.createElement("li");
-    card.classList.add("card");
-    card.innerHTML = `
-            <h3>${store.storeName}</h3>
-            <p>${store.storeDistrict}</p>
-            <button onclick="window.open('${store.storeURL}', '_blank')">Read more</button>
-        `;
-    container.appendChild(card);
-  });
 });
 
 /*
