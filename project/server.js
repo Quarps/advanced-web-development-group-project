@@ -10,7 +10,20 @@ app.use("/", express.static("public"));
 
 //--- Routes --------------------------------------------------------
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.json(stores);
+  const container = document.getElementById("store-container");
+  container.innerHTML = "";
+
+  stores.forEach((store) => {
+    const card = document.createElement("li");
+    card.classList.add("card");
+    card.innerHTML = `
+            <h3>${store.storeName}</h3>
+            <p>${store.storeDistrict}</p>
+            <button onclick="window.open('${store.storeURL}', '_blank')">Read more</button>
+        `;
+    container.appendChild(card);
+  });
 });
 
 /*
