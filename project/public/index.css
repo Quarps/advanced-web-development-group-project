@@ -7,8 +7,10 @@ body {
 /* Header-styling */
 .header {
   position: absolute;
+  width: 100%;
   padding: 20px 50px;
   margin: 0;
+  z-index: 10;
  
   /* background-color: #999; */
 }
@@ -24,7 +26,6 @@ body {
   font-size: 18px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
 }
 
 /* CITY håller sig till vänster */
@@ -65,7 +66,7 @@ body {
   color: white;
   text-align: center;
   font-size: 2rem;
-  z-index: -1;
+  
 }
 
 /* Overlay för bättre textläsbarhet */
