@@ -1,17 +1,20 @@
+/* Tar bort standardmarginaler och padding */
 body {
   margin: 0;
   padding: 0;
 }
 
+/* Header-styling */
 .header {
-  background-color: #999;
-  padding: 20px 0;
-  margin: 0px;
+  padding: 20px 50px;
+  margin: 0;
+  /* background-color: #999; */
 }
 
+/* Header-lista (navigation) */
 .headerlist {
   display: flex;
-  justify-content: space-between; /* Sprider ut CITY till vänster och menyn till höger */
+  justify-content: space-between; /* CITY till vänster, menyn till höger */
   align-items: center;
   list-style: none;
   padding: 0;
@@ -27,10 +30,13 @@ body {
   font-weight: bold;
 }
 
-/* Wrapper för de andra menyvalen */
+/* Meny-styling */
 .menu-items {
   display: flex;
-  gap: 30px; /* Avstånd mellan menyval */
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
 }
 
 .menu-items li {
@@ -41,4 +47,31 @@ body {
 .menu-items li:hover {
   background-color: #ddd;
   border-radius: 5px;
+}
+
+/* HERO SEKTION */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Justera höjden efter behov */
+  background-image: url("/img/jkpg-hero.jpg"); /* Se till att bilden finns i public/img */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Overlay för bättre textläsbarhet */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Halvtransparent overlay */
+  top: 0;
+  left: 0;
 }
