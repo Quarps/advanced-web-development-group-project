@@ -6,8 +6,10 @@ body {
 
 /* Header-styling */
 .header {
+  position: absolute;
   padding: 20px 50px;
   margin: 0;
+ 
   /* background-color: #999; */
 }
 
@@ -63,6 +65,7 @@ body {
   color: white;
   text-align: center;
   font-size: 2rem;
+  z-index: -1;
 }
 
 /* Overlay för bättre textläsbarhet */
