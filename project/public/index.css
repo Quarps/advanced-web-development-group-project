@@ -1,9 +1,37 @@
-.headerlist {
-    display: flex;
-    flex-direction: row;
-   
+.header {
+  background-color: #f8f8f8;
+  padding: 20px 0;
 }
 
-.headerlist li{
-    display: inline;
+.headerlist {
+  display: flex;
+  justify-content: space-between; /* Sprider ut CITY till vänster och menyn till höger */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* CITY håller sig till vänster */
+.city {
+  font-weight: bold;
+}
+
+/* Wrapper för de andra menyvalen */
+.menu-items {
+  display: flex;
+  gap: 30px; /* Avstånd mellan menyval */
+}
+
+.menu-items li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.menu-items li:hover {
+  background-color: #ddd;
+  border-radius: 5px;
 }
