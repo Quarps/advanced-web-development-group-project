@@ -9,10 +9,12 @@ const stores = require("./stores.json");
 app.use(express.json());
 app.use("/", express.static("public"));
 
-//--- Routes --------------------------------------------------------
+//--- REST API --------------------------------------------------------
 app.get("/stores", (req, res) => {
   res.json(stores);
 });
+
+app.delete("/stores/:id", (req, res) => {});
 
 /*
   db.all("SELECT * FROM storeName", [], (err, rows) => {
