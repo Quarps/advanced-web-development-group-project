@@ -2,23 +2,7 @@ const express = require("express");
 const app = express();
 const PORT = 8080;
 
-const stores = [
-  {
-    storeName: "Tech Hub",
-    storeDescription: "Best gadgets in town",
-    storeType: "Electronics",
-  },
-  {
-    storeName: "Book Haven",
-    storeDescription: "A paradise for book lovers",
-    storeType: "Books",
-  },
-  {
-    storeName: "Fashion Forward",
-    storeDescription: "Trendy clothes for everyone",
-    storeType: "Clothing",
-  },
-];
+const stores = require("./stores.json");
 // const db = require("./db");
 
 //--- Middleware ----------------------------------------------------

@@ -9,7 +9,7 @@ fetch("/stores") // This should call the '/stores' endpoint
       card.classList.add("card");
       card.innerHTML = `
         <h3>${store.name}</h3>
-        <p>District: ${store.district}</p>
+        <p>${store.district}</p>
         <a href="https://${store.url}" target="_blank" class="button">Read more</a>
       `;
       container.appendChild(card);

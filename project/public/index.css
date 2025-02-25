@@ -1,102 +1,153 @@
-/* Tar bort standardmarginaler och padding */
+* {
+  /* Tar bort standardmarginaler och padding */
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Header-styling */
+/* HEADER SECION */
 .header {
-  position: absolute;
-  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers content inside */
+  align-items: center;
+  position: absolute; /* Ensures it stays on top of the hero section */
+  top: 0;
+  left: 0;
+  width: 100vw;
   padding: 20px 50px;
-  margin: 0;
-  z-index: 10;
- 
-  /* background-color: #999; */
+  background-color: transparent; /* Keeps it transparent */
+  z-index: 1000; /* Ensures it's always on top */
 }
 
 /* Header-lista (navigation) */
 .headerlist {
   display: flex;
-  justify-content: space-between; /* CITY till vänster, menyn till höger */
+  justify-content: space-between; /* CITY to the left, menu to the right */
   align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  max-width: 1200px;
 }
 
-/* CITY håller sig till vänster */
+/* CITY logotype */
 .city {
   font-weight: bold;
+  font-size: 40px;
+  color: white;
 }
 
-/* Meny-styling */
+/* Navigation Menu */
 .menu-items {
   display: flex;
   list-style: none;
-  gap: 30px;
-  padding: 0;
+  gap: 30px; /* Space between menu items */
+  padding: 10px 0;
   margin: 0;
+  align-items: center; /* Ensures vertical centering */
 }
 
 .menu-items li {
-  padding: 10px 20px;
+  display: flex; /* Use flex to align items vertically */
+  padding: 0;
   cursor: pointer;
+  font-weight: bold;
+  color: white;
+  border: none; /* Remove border on individual items */
+  align-items: center; /* Vertically center the text */
 }
 
 .menu-items li:hover {
-  background-color: #ddd;
-  border-radius: 5px;
+  border-bottom: 2px solid white;
 }
 
-/* HERO SEKTION */
+/* HERO SECTION */
 .hero-section {
   position: relative;
   width: 100%;
-  height: 80vh; /* Justera höjden efter behov */
-  background-image: url("/img/jkpg-hero.jpg"); /* Se till att bilden finns i public/img */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  font-size: 2rem;
-  
+  height: 45vh; /* Adjust the height as per your preference */
 }
 
-/* Overlay för bättre textläsbarhet */
+/* Dark overlay on the image */
 .hero-section::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Halvtransparent overlay */
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1; /* Ensure it's behind the text */
+}
+
+/* Hero image */
+.hero-section-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Ensure the image stays behind the text */
+}
+
+/* TEXT SECTION */
+.text-section {
+  display: flex;
+  flex-direction: column; /* Staplar texten */
+  justify-content: center; /* Centrerar vertikalt */
+  align-items: center; /* Centrerar horisontellt */
+  text-align: center; /* Säkerställer att texten är centrerad */
+  height: 25vh; /* Gör sektionen lika hög som hela skärmen */
+}
+
+/* STORE SECTION */
+.store-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 20px 0px 20px 20px;
+  list-style: none;
+  max-width: 1200px; /* Adjust max width if needed */
+  margin: 0 auto; /* Center container */
 }
 
 .card {
-  border: 1px solid #ddd;
-  padding: 15px;
+  padding: 20px;
   margin: 10px;
   border-radius: 5px;
-  background: #f9f9f9;
+  background: #dcd0ba;
 }
 
 .button {
   display: inline-block;
   padding: 8px 12px;
-  background-color: #007bff;
+  background-color: black;
   color: white;
   text-decoration: none;
   border-radius: 4px;
   text-align: center;
+  cursor: pointer;
 }
 .button:hover {
-  background-color: #0056b3;
+  background-color: #9c3030;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0px 20px 0px;
 }
