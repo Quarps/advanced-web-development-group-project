@@ -7,17 +7,23 @@
   {
     "name": "Akademibokhandeln",
     "url": "akademibokhandeln.se/butik/jonkoping-c",
-    "district": "Öster"
+    "district": "Öster",
+    "description": "Hos oss kan du få lästips och inspiration, besöka författarsamtal och signeringar, ta med barnen på sagostund och hämta ut välförtjänta Läsborgarmärken.",
+    "openingHours": "Måndag-Fredag: 10:00-19:00<br/>Lördag: 10:00–16:00<br/>Söndag: 12:00–16:00"
   },
   {
     "name": "Apoteket AB",
     "url": "apoteket.se/apotek/apoteket-ostra-storgatan-jonkoping/",
-    "district": null
+    "district": null,
+    "description": "Din hälsa är allt för oss. Vi är här när du är sjuk & när du vill vara frisk. Handla egenvård & hämta ut recept i butik eller online på nätet med snabb ...",
+    "openingHours": "Måndag-Fredag: 09:00 - 18:00<br/>Lördag: 10:00 - 15:00<br/>Söndag: Stängt"
   },
   {
     "name": "Apotek Hjärtat",
     "url": "apotekhjartat.se/hitta-apotek-hjartat/jonkoping/apotek_hjartat_smedjegatan_2_jonkoping/",
-    "district": null
+    "district": null,
+    "description": "Välkommen till Apotek Hjärtat. Här hittar du öppettider, adress och karta till oss. Hjärtligt välkommen!",
+    "openingHours": "Måndag-Fredag: 09:00 - 18:00<br/>Lördag: 10:00 - 15:00<br/>Söndag: Stängt"
   },
   {
     "name": "Ashur Brud & Fest - Skrädderi",

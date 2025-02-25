@@ -37,20 +37,37 @@ function displayStores() {
 
   // Create a card for each store
   sortedStores.forEach((store) => {
-    const card = document.createElement("li");
-    card.classList.add("card");
+    const card = document.createElement("button");
+    card.type = "button";
+    card.classList.add("card", "collapsible");
     card.innerHTML = `
       <div>
         <h3>${store.name}</h3>
         <p>${store.district ? store.district : ""}</p>
       </div>
       <div class="edit-button">
-      <img class="icon" src="../img/icon.svg" alt="edit icon" />
+        <img class="icon" src="../img/icon.svg" alt="edit icon" />
       </div>
-      <a href="https://${
-        store.url
-      }" target="_blank" class="button">More information</a>
+      <div class="content">
+        <p>${store.description}</p>
+        <br/>
+        <p>${store.openingHours}</p>
+      </div>
+      <a href="https://${store.url}" target="_blank" class="button">Website</a>
     `;
+
+    // Show content on hover
+    card.addEventListener("mouseenter", () => {
+      const content = card.querySelector(".content");
+      content.style.display = "block"; // Show the content
+    });
+
+    // Hide content when hover stops
+    card.addEventListener("mouseleave", () => {
+      const content = card.querySelector(".content");
+      content.style.display = "none"; // Hide the content
+    });
+
     container.appendChild(card);
   });
 }
