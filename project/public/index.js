@@ -72,4 +72,37 @@ function displayStores() {
   });
 }
 
+//--- ADD ITEMS ----------------------------------------
+const addButton = document.getElementById("add-button");
+const body = document.body;
+addButton.addEventListener("click", () => {
+  const popUp = document.createElement("div");
+  popUp.classList.add("popup-overlay");
+  console.log("hej");
+  popUp.innerHTML = `
+  <div class="pop-up">
+  <div class="pop-up-head">
+      <h3>Add Store</h3>
+      <button class="material-symbols-outlined">close</button>
+      </div>
+      <form class="form">
+      <label for="storeName">Store name:</label><br>
+  <input type="text" id="storeName" name="storeName"><br>
+  <label for="storeUrl">URL:</label><br>
+  <input type="text" id="storeUrl" name="storeUrl"><br>
+  <label for="storeDistrict">Store district:</label><br>
+  <input type="text" id="storeDistrict" name="storeDistrict"><br>
+  <label for="storeDescription">Store description:</label><br>
+  <input type="text" id="storeDescription" name="storeDescription"><br>
+  <label for="storeOpenHours">Open hours:</label><br>
+  <input type="text" id="storeOpenHours" name="storeOpenHours"><br>
+  
+      </form>
+      </div>
+    `;
+    console.log(popUp)
+    body.appendChild(popUp);
+
+})
+
 fetchStores();

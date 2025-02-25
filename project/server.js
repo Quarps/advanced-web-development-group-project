@@ -16,6 +16,8 @@ app.get("/stores", (req, res) => {
 
 app.delete("/stores/:id", (req, res) => {});
 
+app.post("/stores", (req, res) =>{});
+
 /*
   db.all("SELECT * FROM storeName", [], (err, rows) => {
     if (err) {
