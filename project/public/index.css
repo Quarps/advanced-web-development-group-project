@@ -103,6 +103,54 @@ body {
   height: 25vh; /* Gör sektionen lika hög som hela skärmen */
 }
 
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* SORT SECTION */
+.sort-section {
+  display: flex;
+  justify-content: space-between; /* Space between the button and input */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the section */
+  position: relative; /* Allows absolute positioning inside */
+  padding: 0px 20px;
+}
+
+.sort-button {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+  font-size: 16px;
+  height: 36px;
+}
+.sort-button:hover {
+  background-color: #9c3030;
+}
+
+.add-input {
+  height: 36px;
+  display: inline-block;
+  font-size: 16px;
+  padding: 8px 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid #ccc; /* Border to match the button */
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  margin: 0 10px 0 0;
+}
+
 /* STORE SECTION */
 .store-container {
   display: grid;
@@ -111,17 +159,33 @@ body {
     minmax(300px, 1fr)
   ); /* Responsive grid */
   gap: 20px; /* Space between cards */
-  padding: 20px 0px 20px 20px;
+  padding: 20px;
   list-style: none;
   max-width: 1200px; /* Adjust max width if needed */
   margin: 0 auto; /* Center container */
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push content to top & button to bottom */
   padding: 20px;
-  margin: 10px;
   border-radius: 5px;
   background: #dcd0ba;
+  position: relative; /* For absolute positioning of the edit button */
+}
+
+.card > div > h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  white-space: normal; /* Allow wrapping if necessary */
+  overflow-wrap: break-word; /* Ensure long words break and wrap to the next line */
+  word-wrap: break-word; /* Fallback for older browsers */
+  padding-right: 50px; /* Add some space on the right to avoid overlapping with edit button */
+}
+
+.card > div > p {
+  margin: 5px 0px 20px 0px;
 }
 
 .button {
@@ -134,20 +198,28 @@ body {
   text-align: center;
   cursor: pointer;
 }
-.button:hover {
+
+.button:hover,
+.edit-button:hover {
   background-color: #9c3030;
 }
 
-h1 {
-  font-size: 4rem;
-  margin: 0;
-  text-transform: uppercase;
+/* Positioning the edit button to the top-right corner */
+.edit-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
 }
 
-h3 {
-  margin: 0;
-}
-
-p {
-  margin: 5px 0px 20px 0px;
+.icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(98%) sepia(10%) saturate(336%) hue-rotate(222deg)
+    brightness(123%) contrast(100%); /* imported from https://isotropic.co/tool/hex-color-to-css-filter/ */
 }
