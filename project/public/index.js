@@ -81,28 +81,32 @@ addButton.addEventListener("click", () => {
   console.log("hej");
   popUp.innerHTML = `
   <div class="pop-up">
-  <div class="pop-up-head">
-      <h3>Add Store</h3>
-      <button class="material-symbols-outlined">close</button>
-      </div>
-      <form class="form">
-      <label for="storeName">Store name:</label><br>
-  <input type="text" id="storeName" name="storeName"><br>
-  <label for="storeUrl">URL:</label><br>
-  <input type="text" id="storeUrl" name="storeUrl"><br>
-  <label for="storeDistrict">Store district:</label><br>
-  <input type="text" id="storeDistrict" name="storeDistrict"><br>
-  <label for="storeDescription">Store description:</label><br>
-  <input type="text" id="storeDescription" name="storeDescription"><br>
-  <label for="storeOpenHours">Open hours:</label><br>
-  <input type="text" id="storeOpenHours" name="storeOpenHours"><br>
-  
-      </form>
-      </div>
-    `;
-    console.log(popUp)
-    body.appendChild(popUp);
+    <div class="pop-up-head">
+      <h2>Add Store</h2>
+      <button class="material-symbols-outlined sort-button">close</button>
+    </div>
+    <form class="form">
+      <label for="storeName">Store Name:</label>
+      <input type="text" id="storeName" name="storeName">
+      
+      <label for="storeDistrict">Store District:</label>
+      <input type="text" id="storeDistrict" name="storeDistrict">
+      
+      <label for="storeDescription">Store Description:</label>
+      <input type="text" id="storeDescription" name="storeDescription">
+      
+      <label for="storeOpenHours">Open Hours:</label>
+      <input type="text" id="storeOpenHours" name="storeOpenHours">
 
-})
+      <label for="storeUrl">URL:</label>
+      <input type="text" id="storeUrl" name="storeUrl">
+      
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+    `;
+  console.log(popUp);
+  body.appendChild(popUp);
+});
 
 fetchStores();

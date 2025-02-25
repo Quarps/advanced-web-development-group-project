@@ -257,21 +257,67 @@ h1 {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 300px;
+  width: 400px;
   text-align: center;
 }
 
 .pop-up-head {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
+.pop-up-head > h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+.form {
+  display: flex;
+  flex-direction: column; /* Align form items vertically */
+  align-items: flex-start; /* Align items to the left */
+}
+
+.form > input {
+  height: 36px;
+  display: inline-block;
+  font-size: 16px;
+  padding: 0px 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid #ccc; /* Border to match the button */
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box; /* Ensures padding is included in width */
+  margin: 0 10px 0 0;
+  width: 100%;
+}
+
+.form > label {
+  font-size: 14px; /* Make the label text smaller */
+  margin-top: 15px; /* Add more space above the label */
+  margin-bottom: 5px; /* Reduce space below the label */
+}
+
+.form > input[type="submit"] {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  margin: 20px 0 0 0;
+}
+
+.form > input[type="submit"]:hover {
+  background-color: #9c3030;
+}
+
+/* --- GOOGLE ICONS ----------------------------------------------- */
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   top: 10px;
   right: 10px;
   background-color: black;
@@ -280,9 +326,4 @@ h1 {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px;
-}
-
-.form{
-  padding: 20px;
-  justify-content: space-evenly;
 }
