@@ -45,9 +45,9 @@ function displayStores() {
         <h3>${store.name}</h3>
         <p>${store.district ? store.district : ""}</p>
       </div>
-      <div class="edit-button">
+      <button id="edit-button" class="edit-button">
         <img class="icon" src="../img/icon.svg" alt="edit icon" />
-      </div>
+      </button>
       <div class="content">
         <p>${store.description}</p>
         <br/>
@@ -110,3 +110,41 @@ addButton.addEventListener("click", () => {
 });
 
 fetchStores();
+const container = document.getElementById("store-container");
+
+container.addEventListener("click", (event) => {
+  // Check if the clicked element is an edit button (inside a store card)
+  if (event.target && event.target.classList.contains("edit-button")) {
+    const popUp = document.createElement("div");
+    popUp.classList.add("popup-overlay");
+    console.log("hej");
+    popUp.innerHTML = `
+    <div class="pop-up">
+      <div class="pop-up-head">
+        <h2>Edit Store</h2>
+        <button class="material-symbols-outlined sort-button">close</button>
+      </div>
+      <form class="form">
+        <label for="storeName">Store Name:</label>
+        <input type="text" id="storeName" name="storeName">
+        
+        <label for="storeDistrict">Store District:</label>
+        <input type="text" id="storeDistrict" name="storeDistrict">
+        
+        <label for="storeDescription">Store Description:</label>
+        <input type="text" id="storeDescription" name="storeDescription">
+        
+        <label for="storeOpenHours">Open Hours:</label>
+        <input type="text" id="storeOpenHours" name="storeOpenHours">
+
+        <label for="storeUrl">URL:</label>
+        <input type="text" id="storeUrl" name="storeUrl">
+        
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    `;
+    console.log(popUp);
+    body.appendChild(popUp);
+  }
+});
