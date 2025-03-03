@@ -12,6 +12,14 @@ body {
   box-sizing: border-box;
 }
 
+footer {
+  background-color: black;
+  height: 300px;
+  color: white;
+  font-size: 240px;
+  font-weight: 1000;
+  margin-top: 50px;
+}
 /* HEADER SECION */
 .header {
   display: flex;
@@ -101,6 +109,7 @@ body {
   align-items: center; /* Centrerar horisontellt */
   text-align: center; /* Säkerställer att texten är centrerad */
   height: 25vh; /* Gör sektionen lika hög som hela skärmen */
+  margin: 50px 0px;
 }
 
 h1 {
