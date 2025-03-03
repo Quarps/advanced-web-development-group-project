@@ -29,7 +29,7 @@ footer {
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 20px 50px;
+  padding: 20px 20px;
   background-color: transparent; /* Keeps it transparent */
   z-index: 900; /* Ensures it's always on top */
 }
@@ -182,10 +182,12 @@ h1 {
   border-radius: 5px;
   background: #dcd0ba;
   position: relative; /* For absolute positioning of the edit button */
+  min-height: 170px; /* Ensure a minimum height */
 }
 
 .card > div > h3 {
   margin: 0;
+  max-width: 300px;
   font-size: 1.2rem;
   white-space: normal; /* Allow wrapping if necessary */
   overflow-wrap: break-word; /* Ensure long words break and wrap to the next line */
@@ -265,7 +267,7 @@ h1 {
 .content {
   display: none;
   overflow: hidden;
-  max-width: 220px;
+  max-width: 300px;
 }
 
 .popup-overlay {
@@ -354,4 +356,18 @@ h1 {
   cursor: pointer;
   padding: 9px;
   font-size: 18px;
+}
+
+/* --- MEDIA QUERIES ----------------------------------------------- */
+.menu-button {
+  display: none; /* Hide the account button on large screens */
+}
+
+@media screen and (max-width: 950px) {
+  .menu-items li {
+    display: none; /* Hide all menu items and the account button */
+  }
+  .menu-button {
+    display: flex; /* Hide the account button on large screens */
+  }
 }
