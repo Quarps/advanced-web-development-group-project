@@ -200,7 +200,8 @@ h1 {
 }
 
 .button:hover,
-.edit-button:hover {
+.edit-button:hover,
+.delete-button:hover {
   background-color: #9c3030;
 }
 
@@ -214,7 +215,25 @@ h1 {
   text-decoration: none;
   border-radius: 4px;
   cursor: pointer;
-  padding: 10px;
+  padding: 9px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 9px;
+  font-size: 18px;
 }
 
 .icon {
@@ -237,6 +256,7 @@ h1 {
 .content {
   display: none;
   overflow: hidden;
+  max-width: 220px;
 }
 
 .popup-overlay {
@@ -318,12 +338,11 @@ h1 {
 /* --- GOOGLE ICONS ----------------------------------------------- */
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-  top: 10px;
-  right: 10px;
   background-color: black;
   color: white;
   text-decoration: none;
   border-radius: 4px;
   cursor: pointer;
-  padding: 10px;
+  padding: 9px;
+  font-size: 18px;
 }
