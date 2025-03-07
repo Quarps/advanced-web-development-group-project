@@ -95,7 +95,6 @@ const importStores = async () => {
 const getStores = async () => {
   try {
     const res = await client.query("SELECT * FROM storesNew");
-    console.log(res.rows);
     return res.rows; // Return stores instead of just logging
   } catch (err) {
     console.error("Error fetching stores:", err.stack);
@@ -119,6 +118,7 @@ const runSetup = async () => {
 
 runSetup();
 
+//--- ROUTES -------------------------------------------------------
 //--- GET STORES ------------------------------------------------------
 app.get("/stores", async (req, res) => {
   try {

@@ -9,7 +9,7 @@ document.getElementById("sort-button").addEventListener("click", function () {
 
   // Update the button text based on the sorting order
   const button = document.getElementById("sort-button");
-  button.textContent = ascending ? "Sort A-Z" : "Sort Z-A";
+  button.textContent = ascending ? "Sort A-Ö" : "Sort Ö-A";
 });
 
 //--- FETCHES STORES ----------------------------------------
@@ -37,7 +37,7 @@ function displayStores() {
 
   // Sort based on current order
   const sortedStores = [...storesData].sort((a, b) => {
-    return ascending
+    return ascending //? means if ascending is true first condition will be executed else second
       ? a.name.localeCompare(b.name, "sv", { sensitivity: "base" }) // A-Z (Swedish alphabet) (base = case-insensitive)
       : b.name.localeCompare(a.name, "sv", { sensitivity: "base" }); // Z-A (Swedish alphabet)
   });
@@ -91,12 +91,18 @@ function displayStores() {
     container.appendChild(card);
   });
 }
+<<<<<<< Updated upstream
 
 // Toggle sorting order when clicking a button or similar
+=======
+//DELETE THIS PART?
+// Optional: Toggle sorting order when clicking a button or similar
+>>>>>>> Stashed changes
 function toggleSortOrder() {
   ascending = !ascending;
   displayStores(); // Re-render stores with the new sort order
 }
+//DELETE THIS PART?
 
 //--- ADD ITEMS ----------------------------------------
 const addButton = document.getElementById("add-button");
@@ -260,6 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const updatedData = await response.json();
+
             storesData = storesData.map((store) =>
               store.id == storeId ? updatedData : store
             ); // Update UI data
