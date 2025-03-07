@@ -92,7 +92,7 @@ function displayStores() {
   });
 }
 
-// Optional: Toggle sorting order when clicking a button or similar
+// Toggle sorting order when clicking a button or similar
 function toggleSortOrder() {
   ascending = !ascending;
   displayStores(); // Re-render stores with the new sort order
