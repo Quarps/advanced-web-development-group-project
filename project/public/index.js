@@ -69,7 +69,9 @@ function displayStores() {
           store.description ? store.description : "No description available"
         }</p>
         <br/>
-        <p>${store.type ? store.type : "No store type available"}</p>
+        <p>Store type: ${
+          store.type ? store.type : "No store type available"
+        }</p>
       </div>
       <a href="https://${store.url}" target="_blank" class="button">Website</a>
     `;
