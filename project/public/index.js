@@ -91,18 +91,6 @@ function displayStores() {
     container.appendChild(card);
   });
 }
-<<<<<<< Updated upstream
-
-// Toggle sorting order when clicking a button or similar
-=======
-//DELETE THIS PART?
-// Optional: Toggle sorting order when clicking a button or similar
->>>>>>> Stashed changes
-function toggleSortOrder() {
-  ascending = !ascending;
-  displayStores(); // Re-render stores with the new sort order
-}
-//DELETE THIS PART?
 
 //--- ADD ITEMS ----------------------------------------
 const addButton = document.getElementById("add-button");
@@ -266,7 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const updatedData = await response.json();
-
             storesData = storesData.map((store) =>
               store.id == storeId ? updatedData : store
             ); // Update UI data
